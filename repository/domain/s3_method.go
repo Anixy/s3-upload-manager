@@ -2,7 +2,6 @@ package domain
 
 import (
 	"io"
-	"log"
 
 	"github.com/minio/minio-go"
 )
@@ -11,7 +10,7 @@ import (
 func (d *s3Impl) UploadObject(objectName string, reader io.Reader, objectSize int64, opts minio.PutObjectOptions) (n int64, err error) {
 	n, err = d.Client.PutObject(d.BucketName, objectName, reader, objectSize, opts)
 	if err != nil {
-		log.Println(err)
+		return
 	}
 	return
 }
