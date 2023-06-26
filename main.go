@@ -1,17 +1,15 @@
 package main
 
 import (
-	"net/http"
+	"Anixy/s3-upload-manager/handler"
+	"Anixy/s3-upload-manager/routers"
 
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
+	handler := handler.NewHandler()
 	router := gin.Default()
-	router.GET("/ping", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{
-			"message": "ping",
-		})
-	})
+	routers.Set(router, handler)
 	router.Run(":8080")
 }
