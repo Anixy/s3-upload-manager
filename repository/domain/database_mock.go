@@ -22,7 +22,7 @@ func (m *MockDatabase) AddFile(file *model.File) (err error) {
 	return args.Error(0)
 }
 
-func (m *MockDatabase) DeleteFileByID(fileID uint) (err error)  {
+func (m *MockDatabase) DeleteFileByID(fileID uint) (err error) {
 	args := m.Called(fileID)
 	return args.Error(0)
 }

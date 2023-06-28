@@ -12,10 +12,10 @@ import (
 func Test_Database_AddFile_Success(t *testing.T) {
 	mockDatabaseDomain := new(MockDatabase)
 	file := model.File{
-		Name: "test.txt",
+		Name:       "test.txt",
 		Visibility: "public",
-		Size: 40,
-		Bucket: "test-bucket",
+		Size:       40,
+		Bucket:     "test-bucket",
 	}
 	mockDatabaseDomain.On("AddFile", &file).Return(nil)
 	err := mockDatabaseDomain.AddFile(&file)
@@ -26,10 +26,10 @@ func Test_Database_AddFile_Success(t *testing.T) {
 func Test_Database_AddFile_Failed(t *testing.T) {
 	mockDatabaseDomain := new(MockDatabase)
 	file := model.File{
-		Name: "test.txt",
+		Name:       "test.txt",
 		Visibility: "public",
-		Size: 40,
-		Bucket: "test-bucket",
+		Size:       40,
+		Bucket:     "test-bucket",
 	}
 	errMsg := errors.New("Failed add file record")
 	mockDatabaseDomain.On("AddFile", &file).Return(errMsg)
