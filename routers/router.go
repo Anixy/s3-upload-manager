@@ -1,7 +1,7 @@
 package routers
 
 import (
-	"Anixy/s3-upload-manager/handler"
+	"github.com/Anixy/s3-upload-manager/handler"
 
 	"github.com/gin-gonic/gin"
 )

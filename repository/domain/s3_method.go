@@ -14,3 +14,11 @@ func (d *s3Impl) UploadObject(objectName string, reader io.Reader, objectSize in
 	}
 	return
 }
+
+func (d *s3Impl) DeleteObject(objectName string) (err error) {
+	err = d.Client.RemoveObject(d.BucketName, objectName)
+	if err != nil {
+		return
+	}
+	return
+}

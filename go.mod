@@ -1,4 +1,4 @@
-module Anixy/s3-upload-manager
+module github.com/Anixy/s3-upload-manager
 
 go 1.20
 

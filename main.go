@@ -1,8 +1,8 @@
 package main
 
 import (
-	"Anixy/s3-upload-manager/handler"
-	"Anixy/s3-upload-manager/routers"
+	"github.com/Anixy/s3-upload-manager/handler"
+	"github.com/Anixy/s3-upload-manager/routers"
 
 	"github.com/gin-gonic/gin"
 )
